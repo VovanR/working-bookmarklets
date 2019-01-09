@@ -5,15 +5,6 @@ const Terser = require("terser");
 const PRE = "javascript:";
 const POST = "void(0);";
 
-// const sourceCode = fs.readFileSync('./source.js', 'utf-8');
-// const minifiedCode = Terser.minify(sourceCode).code;
-//
-// const result = PRE + minifiedCode + POST;
-//
-// console.log(result);
-//
-// fs.writeFileSync('./bookmarklet.js', result, 'utf-8');
-
 const SRC_DIR = "./src/";
 const BUILD_DIR = "./build/";
 
