@@ -1,0 +1,1 @@
+javascript:!function({location:{protocol:protocol,host:host}}){location.href=`${protocol}//${host}/new-import?importId=1`}(window);void(0);
