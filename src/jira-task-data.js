@@ -5,9 +5,24 @@
 
 (function({ JIRA, AJS, location }) {
   const id = JIRA.Issue.getIssueKey();
+  const name = document.getElementById("summary-val").innerText;
 
-  AJS.flag({
-    title: id + ": " + document.getElementById("summary-val").innerText,
-    body: location.origin + "/browse/" + id
+  const title = id + ": " + name;
+  const url = location.origin + "/browse/" + id;
+
+  const style =
+    "font-family: monospace; box-sizing: border-box; width: 100%; resize: none;";
+
+  const flag = AJS.flag({
+    body: `<div><textarea style="${style}" rows="2">${title}
+${url}</textarea><input value="${url}" style="${style}"/></div>`
   });
+
+  flag.querySelector("textarea").addEventListener("click", copy);
+  flag.querySelector("input").addEventListener("click", copy);
+
+  function copy({ target }) {
+    target.select();
+    document.execCommand("copy");
+  }
 })(window);
