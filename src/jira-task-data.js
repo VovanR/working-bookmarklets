@@ -15,11 +15,13 @@
 
   const flag = AJS.flag({
     body: `<div><textarea style="${style}" rows="2">${title}
-${url}</textarea><input value="${url}" style="${style}"/></div>`
+${url}</textarea><input value="${url}" style="${style}"/><input value="${id}" style="${style}"/></div>`
   });
 
   flag.querySelector("textarea").addEventListener("click", copy);
-  flag.querySelector("input").addEventListener("click", copy);
+  flag
+    .querySelectorAll("input")
+    .forEach(el => el.addEventListener("click", copy));
 
   function copy({ target }) {
     target.select();
