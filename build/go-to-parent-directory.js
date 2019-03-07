@@ -1,0 +1,1 @@
+javascript:!function({location:l}){let newPath=l.pathname.split("/");""===newPath.pop()&&newPath.pop(),l.href=l.protocol+"//"+l.host+newPath.join("/")}(window);void(0);
