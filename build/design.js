@@ -1,0 +1,1 @@
+javascript:!function(d){d.designMode="on"===d.designMode?"off":"on"}(document);void(0);
