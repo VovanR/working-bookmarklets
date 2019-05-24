@@ -1,4 +1,4 @@
-(function({ location: l }) {
+(function(l) {
   let newPath = l.pathname.split("/");
 
   if (newPath.pop() === "") {
@@ -6,4 +6,4 @@
   }
 
   l.href = l.protocol + "//" + l.host + newPath.join("/");
-})(window);
+})(window.location);

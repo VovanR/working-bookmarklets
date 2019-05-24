@@ -1,3 +1,3 @@
-(function({ location: l }) {
+(function(l) {
   l.href = l.protocol + "//" + l.hostname.replace(/.+?\./, "");
-})(window);
+})(window.location);

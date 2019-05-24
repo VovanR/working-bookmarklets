@@ -1,1 +1,1 @@
-javascript:!function({location:l}){l.href=l.protocol+"//"+l.hostname.replace(/.+?\./,"")}(window);void(0);
+javascript:!function(l){l.href=l.protocol+"//"+l.hostname.replace(/.+?\./,"")}(window.location);void(0);
