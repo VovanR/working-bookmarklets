@@ -3,7 +3,7 @@
   let url = "";
 
   const getAddNewTaskButtonElement = () =>
-    document.querySelector("#addTasksLink");
+    document.querySelector("#addTaskButtonId");
 
   const getAddTaskDescriptionButtonElement = () =>
     document.querySelector("#descriptionElement");
