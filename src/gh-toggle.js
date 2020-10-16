@@ -1,7 +1,7 @@
 // https://jsfiddle.net/VovanR/2Lhsw69r/
 // https://codepen.io/VovanR/pen/Lqgewm
 
-(function({ location: { href } }) {
+(function ({ location: { href } }) {
   if (/vovanr\.com/.test(href)) {
     href = href.replace("vovanr.com", "vovanr.github.io");
   }

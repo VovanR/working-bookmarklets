@@ -1,4 +1,4 @@
-(function(l) {
+(function (l) {
   let newPath = l.pathname.split("/");
 
   if (newPath.pop() === "") {

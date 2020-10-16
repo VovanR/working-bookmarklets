@@ -1,4 +1,4 @@
-(function() {
+(function () {
   let title = "";
   let url = "";
 

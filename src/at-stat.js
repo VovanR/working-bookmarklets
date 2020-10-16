@@ -1,7 +1,7 @@
-(function() {
+(function () {
   const taskRows = document.querySelectorAll(".taskRow");
 
-  taskRows.forEach(rowElement => {
+  taskRows.forEach((rowElement) => {
     const statusIconElement = rowElement.querySelectorAll(
       ".workflowStatusIcon"
     )[0];
