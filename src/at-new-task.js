@@ -3,10 +3,14 @@
   let url = "";
 
   const getAddNewTaskDropdownButtonElement = () =>
-    document.querySelector("button[class*='containers-EnterTT-ETTTaskPanel-trigger']");
+    document.querySelector(
+      "button[class*='containers-EnterTT-ETTTaskPanel-trigger']"
+    );
 
   const getAddNewTaskButtonElement = () =>
-    document.querySelector("button[class*='containers-EnterTT-ETTTaskPanel-addNew']");
+    document.querySelector(
+      "button[class*='containers-EnterTT-ETTTaskPanel-addNew']"
+    );
 
   const getAddTaskDescriptionButtonElement = () =>
     document.querySelector("#descriptionElement");
@@ -31,7 +35,6 @@
 
     clearInterval(interval);
     button.click();
-
 
     function listener({ target: { value } }) {
       [title, url] = value.split("\n");

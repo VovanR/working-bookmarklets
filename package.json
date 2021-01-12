@@ -20,10 +20,10 @@
   "keywords": [],
   "dependencies": {},
   "devDependencies": {
-    "husky": "4.3.0",
-    "prettier": "2.1.2",
+    "husky": "4.3.7",
+    "prettier": "2.2.1",
     "pretty-quick": "3.1.0",
-    "terser": "5.3.5"
+    "terser": "5.5.1"
   },
   "bugs": {
     "url": "https://github.com/VovanR/working-bookmarklets/issues"
