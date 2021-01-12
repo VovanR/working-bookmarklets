@@ -2,8 +2,11 @@
   let title = "";
   let url = "";
 
+  const getAddNewTaskDropdownButtonElement = () =>
+    document.querySelector("button[class*='containers-EnterTT-ETTTaskPanel-trigger']");
+
   const getAddNewTaskButtonElement = () =>
-    document.querySelector("#addTaskButtonId");
+    document.querySelector("button[class*='containers-EnterTT-ETTTaskPanel-addNew']");
 
   const getAddTaskDescriptionButtonElement = () =>
     document.querySelector("#descriptionElement");
@@ -17,27 +20,38 @@
   const getCreateTaskButtonElement = () =>
     document.querySelector("#createTasksPopup .components_button");
 
-  getAddNewTaskButtonElement().click();
+  getAddNewTaskDropdownButtonElement().click();
 
-  function listener({ target: { value } }) {
-    [title, url] = value.split("\n");
+  let interval = setInterval(() => {
+    const button = getAddNewTaskButtonElement();
 
-    getDescriptionElement().removeEventListener("input", listener);
-    getDescriptionElement().value = url;
+    if (button.disabled) {
+      return;
+    }
 
-    getNameElement().value = title;
+    clearInterval(interval);
+    button.click();
 
-    document.querySelector("#scbutton").click();
 
-    getNameElement().click();
-    getNameElement().dispatchEvent(new Event("blur"));
+    function listener({ target: { value } }) {
+      [title, url] = value.split("\n");
 
-    getCreateTaskButtonElement().click();
-  }
+      getDescriptionElement().removeEventListener("input", listener);
+      getDescriptionElement().value = url;
 
-  setTimeout(() => {
-    getAddTaskDescriptionButtonElement().click();
+      getNameElement().value = title;
 
-    getDescriptionElement().addEventListener("input", listener);
-  }, 1000);
+      document.querySelector("#scbutton").click();
+
+      getNameElement().click();
+      getNameElement().dispatchEvent(new Event("blur"));
+
+      getCreateTaskButtonElement().click();
+    }
+
+    setTimeout(() => {
+      getAddTaskDescriptionButtonElement().click();
+      getDescriptionElement().addEventListener("input", listener);
+    }, 1000);
+  }, 250);
 })();
