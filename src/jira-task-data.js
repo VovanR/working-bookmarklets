@@ -1,11 +1,14 @@
 // https://github.com/VovanR/v-index-bookmarklet/blob/master/dist/bookmarklet.js
 // https://github.com/VovanR/css-diagnostics-bookmarklet
 // https://github.com/hootstheowl/bookmarklet-loader/blob/master/index.js
-// https://docs.atlassian.com/aui/7.9.5/docs/flag.html
+// https://aui.atlassian.com/aui/9.1/docs/flag.html
 
 (function ({ JIRA, AJS, location }) {
-  const id = JIRA.Issue.getIssueKey();
-  const name = document.getElementById("summary-val").innerText;
+  const id =
+    new URLSearchParams(location.search).get("selectedIssue") ||
+    location.href.split("/").reverse()[0];
+  const name = Array.from(document.querySelectorAll("h1")).reverse()[0]
+    .textContent;
 
   const title = id + ": " + name;
   const url = location.origin + "/browse/" + id;
