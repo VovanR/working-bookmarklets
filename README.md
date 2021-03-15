@@ -52,7 +52,8 @@ blog.example.com    => example.com
 ```
 
 ### [jira-task-data](./build/jira-task-data.js)
-Open JIRA task data tooltip
+Open JIRA task data tooltip  
+![](docs/jira-task-data.png)
 
 ## License
 
