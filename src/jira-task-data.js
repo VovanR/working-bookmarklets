@@ -7,8 +7,9 @@
   const id =
     new URLSearchParams(location.search).get("selectedIssue") ||
     location.href.split("/").reverse()[0];
-  const name = Array.from(document.querySelectorAll("h1")).reverse()[0]
-    .textContent;
+  const name = document.querySelector(
+    '[data-test-id="issue.views.issue-base.foundation.summary.heading"]'
+  ).textContent;
 
   const title = id + ": " + name;
   const url = location.origin + "/browse/" + id;
