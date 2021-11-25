@@ -1,0 +1,1 @@
+javascript:!function(d){var content=d.createTextNode("\n\n[data-id] {\n  outline: 2px solid lime;\n}\n\n  "),styleNode=d.createElement("style");styleNode.append(content),d.head.append(styleNode)}(document);void(0);

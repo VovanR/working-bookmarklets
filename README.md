@@ -55,6 +55,10 @@ blog.example.com    => example.com
 Open JIRA task data tooltip  
 ![](docs/jira-task-data.png)
 
+
+### [dev-css-inspector](./build/dev-css-inspector.js)
+Highlights QA data-attributes
+
 ## License
 
 MIT © [Vladimir Rodkin](https://github.com/VovanR)
