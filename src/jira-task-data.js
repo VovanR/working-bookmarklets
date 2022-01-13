@@ -3,10 +3,10 @@
 // https://github.com/hootstheowl/bookmarklet-loader/blob/master/index.js
 // https://aui.atlassian.com/aui/9.1/docs/flag.html
 
-(function ({ JIRA, AJS, location }) {
+(function ({ AJS, location }) {
   const id =
     new URLSearchParams(location.search).get("selectedIssue") ||
-    location.href.split("/").reverse()[0];
+    location.pathname.split("/").reverse()[0];
   const name = document.querySelector(
     '[data-test-id="issue.views.issue-base.foundation.summary.heading"]'
   ).textContent;
