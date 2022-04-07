@@ -1,7 +1,4 @@
 (function () {
-  let title = "";
-  let url = "";
-
   const getAddNewTaskDropdownButtonElement = () =>
     document.querySelector(
       "button[class*='containers-EnterTT-ETTTaskPanel-trigger']"
@@ -26,7 +23,7 @@
 
   getAddNewTaskDropdownButtonElement().click();
 
-  let interval = setInterval(() => {
+  const interval = setInterval(() => {
     const button = getAddNewTaskButtonElement();
 
     if (button.disabled) {
@@ -37,9 +34,14 @@
     button.click();
 
     function listener({ target: { value } }) {
-      [title, url] = value.split("\n");
+      const [title, url] = value.split("\n");
 
       getDescriptionElement().removeEventListener("input", listener);
+
+      if (!title || !url) {
+        return;
+      }
+
       getDescriptionElement().value = url;
 
       getNameElement().value = title;
