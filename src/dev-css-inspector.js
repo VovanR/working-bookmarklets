@@ -4,7 +4,15 @@
   var content = d.createTextNode(`
 
 [data-id] {
-  outline: 2px solid lime;
+  outline: 2px solid lime !important;
+}
+
+[data-id]::after {
+  content: attr(data-id);
+  color: lime;
+  font-size: 10px;
+  text-shadow: 0 1px black;
+  width: 0;
 }
 
   `);

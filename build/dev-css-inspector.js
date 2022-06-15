@@ -1,1 +1,1 @@
-javascript:!function(d){var content=d.createTextNode("\n\n[data-id] {\n  outline: 2px solid lime;\n}\n\n  "),styleNode=d.createElement("style");styleNode.append(content),d.head.append(styleNode)}(document);void(0);
+javascript:!function(d){var content=d.createTextNode("\n\n[data-id] {\n  outline: 2px solid lime !important;\n}\n\n[data-id]::after {\n  content: attr(data-id);\n  color: lime;\n  font-size: 10px;\n  text-shadow: 0 1px black;\n  width: 0;\n}\n\n  "),styleNode=d.createElement("style");styleNode.append(content),d.head.append(styleNode)}(document);void(0);
